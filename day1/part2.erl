@@ -16,7 +16,7 @@ process_lines(Lines) ->
 process_lines([], Running_Total) ->
 	Running_Total;
 process_lines([Line|Lines], Running_Total) ->
-	Regex_Digit_Strings = "one|two|three|four|five|six|seven|eight|nine|zero",
+	Regex_Digit_Strings = "one|two|three|four|five|six|seven|eight|nine",
 	Regex_String_Forwards = "[1-9]|" ++ Regex_Digit_Strings,
 	Regex_String_Backwards = "[1-9]|" ++ string:reverse(Regex_Digit_Strings),
 	Rev_Line = string:reverse(Line),

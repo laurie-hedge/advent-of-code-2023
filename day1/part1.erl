@@ -16,7 +16,7 @@ process_lines(Lines) ->
 process_lines([], Running_Total) ->
 	Running_Total;
 process_lines([Line|Lines], Running_Total) ->
-	{match, Matches} = re:run(Line, "[0-9]", [global]),
+	{match, Matches} = re:run(Line, "[1-9]", [global]),
 	Match_List = lists:flatten(Matches),
 	{First_Index, 1} = lists:nth(1, Match_List),
 	{Last_Index, 1} = lists:nth(length(Match_List), Match_List),
